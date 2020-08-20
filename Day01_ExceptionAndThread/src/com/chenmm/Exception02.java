@@ -1,3 +1,4 @@
+package com.chenmm;
 
 //异常的产生过程解析
 public class Exception02 {

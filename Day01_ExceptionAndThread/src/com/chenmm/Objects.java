@@ -1,3 +1,5 @@
+package com.chenmm;
+
 /*
 obects类中的静态方法:
 public static <T> T requireNonNuLL(T obj):查看指定引用对象不是nulL。

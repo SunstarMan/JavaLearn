@@ -1,3 +1,4 @@
+package com.chenmm;
 
 //异常的处理
 /*throw关键字
