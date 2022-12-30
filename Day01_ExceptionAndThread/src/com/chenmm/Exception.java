@@ -1,9 +1,5 @@
 package com.chenmm;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /*
 java.lang.Throwable:是Java语言中所有错误和异常的超类
 
@@ -34,5 +30,6 @@ public class Exception extends Throwable {
             System.out.println(e);
         }
         System.out.println("后续代码");
+        System.out.println("可以看见后面的代码");
     }
 }
