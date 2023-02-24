@@ -18,6 +18,10 @@ import java.util.concurrent.FutureTask;
 public class ThreadByCallableFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
+        /*
+        FutureTask 提供了 Future 接口的基本实现，常用来封装 Callable 和 Runnable，
+        具有 取消任务、查看任务是否执行完成 以及 获取任务执行结果 的方法。
+         */
         FutureTask<String> futureTask = new FutureTask<>(new Callable<String>() {
             @Override
             public String call() throws Exception {
