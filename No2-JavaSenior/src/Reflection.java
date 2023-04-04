@@ -1,9 +1,6 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 /**
  * @author Chen Manman
@@ -35,7 +32,7 @@ public class Reflection {
 
     //1、创建一个我们要使用反射操作的类 TestReflection。
     public static class TestReflection {
-        private String val;
+        private final String val;
 
         public TestReflection() {
             val = "manTest";
