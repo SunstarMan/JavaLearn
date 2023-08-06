@@ -33,7 +33,6 @@ public class ThreadByCallableFuture {
                 return "线程3";
             }
         });
-        AbstractQueuedSynchronizer
         Thread thread3 = new Thread(futureTask);
         thread3.start();
         String s = futureTask.get();
