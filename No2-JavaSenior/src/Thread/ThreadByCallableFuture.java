@@ -1,6 +1,10 @@
+package Thread;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * @author Chen Manman
@@ -29,7 +33,7 @@ public class ThreadByCallableFuture {
                 return "线程3";
             }
         });
-
+        AbstractQueuedSynchronizer
         Thread thread3 = new Thread(futureTask);
         thread3.start();
         String s = futureTask.get();

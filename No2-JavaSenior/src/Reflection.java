@@ -1,3 +1,7 @@
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.Reader;
+import java.io.Writer;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -7,7 +11,7 @@ import java.lang.reflect.Method;
  * @since 2023/4/4 10:23
  */
 public class Reflection {
-    //---------------------------------------获取Class对象的4种方式-------------------------------------
+//    ---------------------------------------获取Class对象的4种方式-------------------------------------
 //    public static void main(String[] args) throws ClassNotFoundException {
 //        //1、知道具体类的情况下可以使用：
 //        Class i = Integer.class;
@@ -28,8 +32,10 @@ public class Reflection {
 //        System.out.println(aClass);
 //    }
 
-    //-----------------------------------------反射的一些基本操作--------------------------------------
 
+
+
+    //-----------------------------------------反射的一些基本操作--------------------------------------
     //1、创建一个我们要使用反射操作的类 TestReflection。
     public static class TestReflection {
         private final String val;
@@ -76,5 +82,6 @@ public class Reflection {
         privateMethod.setAccessible(true);
         privateMethod.invoke(testReflectionInstance);
     }
+
 
 }

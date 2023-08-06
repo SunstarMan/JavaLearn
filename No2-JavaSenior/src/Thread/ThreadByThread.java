@@ -1,3 +1,5 @@
+package Thread;
+
 /**
  * @author Chen Manman
  * @since 2022/12/16 15:45

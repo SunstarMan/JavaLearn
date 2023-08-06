@@ -1,3 +1,5 @@
+package ThreadPool;
+
 import java.util.concurrent.*;
 
 /**
@@ -24,7 +26,7 @@ import java.util.concurrent.*;
     3、ScheduledThreadPool 和 SingleThreadScheduledExecutor : 使用的无界的延迟阻塞队列DelayedWorkQueue，
     任务队列最大长度为 Integer.MAX_VALUE,可能堆积大量的请求，从而导致 OOM。
  */
-public class ThreadPool_Executor {
+public class ThreadPool_Executors {
     // 无界队列 LinkedBlockingQueue
     ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
 

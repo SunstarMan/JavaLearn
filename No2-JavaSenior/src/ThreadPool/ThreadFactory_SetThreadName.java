@@ -1,3 +1,5 @@
+package ThreadPool;
+
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -15,14 +17,14 @@ ExecutorService threadPool = new ThreadPoolExecutor(corePoolSize, maximumPoolSiz
 2、自己实现 ThreadFactory。
 线程工厂，它设置线程名称，有利于我们定位问题。
  */
-public final class ThreadFactor_SetThreadName implements ThreadFactory {
+public final class ThreadFactory_SetThreadName implements ThreadFactory {
     private final AtomicInteger threadNum = new AtomicInteger();
     private final ThreadFactory delegate;
 
     private final String name;
 
     //创建一个带名字的线程池生产工厂
-    public ThreadFactor_SetThreadName(ThreadFactory delegate, String name) {
+    public ThreadFactory_SetThreadName(ThreadFactory delegate, String name) {
         this.delegate = delegate;
         this.name = name;
     }

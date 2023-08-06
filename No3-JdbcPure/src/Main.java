@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        // 加载驱动
+        // 加载驱动,这行代码可写可不写，在mysql-connector-j-8.0.31.jar!\META-INF\services\中有
         Class.forName("com.mysql.cj.jdbc.Driver");
         // 获取连接
         Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "02080328");
@@ -31,6 +31,7 @@ public class Main {
         names.add("居里夫人传");
 //        PreparedStatement statement = connection.prepareStatement("insert into book (name, create_time) values ('格林童话', '2022-12-30')");
         PreparedStatement statement = connection.prepareStatement("insert into book(name, create_time) values (?, ?)");
+//        CallableStatement callableStatement = connection.prepareCall("insert into book(name, create_time) values (?, ?)");
         for (String name : names) {
             statement.setString(1, name);
             statement.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
